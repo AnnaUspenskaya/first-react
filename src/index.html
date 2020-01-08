@@ -6,6 +6,12 @@
         <title>React App</title>
     </head>
     <body>   
+        <p><b>Arrow Function</b></p>
+<p>hello = () => "Hello World!";</p>
+<p id="arrow"></p>
+<p><b>Arrow Function with parameters</b></p>
+<p>hello = (val) => "Hello +val ;</p>
+<p id="arrow-par"></p>
         <script>
             
         // <!-- React uses ES6, some of the new features: -->
@@ -13,7 +19,7 @@
         // <!-- Arrow Functions-->
         // <!-- Variables (let, const, var) -->
 
-// <!-- Classes -->
+// <!-- CLASSES -->
 class Car {
     constructor(name){
         this.brand = name;
@@ -24,7 +30,7 @@ class Car {
 }
 class Model extends Car {
     constructor(name, mod){
-        super(name);
+        super(name); //referes to the parent class Car
         this.model=mod;
     }
     show() {
@@ -35,8 +41,16 @@ mycar = new Model("Ford", "Mustang");
 
 document.write(mycar.show());
 
+// <!-- ARROW FUNCTION -->
+// hello = function() {
+//   return "Hello World!";
+// }
+// ==>
+hello = () => "Hello World!";
+document.getElementById("arrow").innerHTML=hello();
+hello = (val) => "Hello " + val;
+document.getElementById("arrow-par").innerHTML=hello("World");
 </script>  
-
 
 
 
